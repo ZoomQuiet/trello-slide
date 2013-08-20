@@ -1,3 +1,107 @@
+#best-of-trello h1 {
+    font-size: 52px;
+}
+
+#best-of-trello li {
+    font-size: 33px;
+}
+
+#best-of-trello p {
+    font-size: 28px;
+}
+
+#agile {
+    text-align: center;
+}
+
+#agile h1 {
+    font-size: 52px;
+}
+
+#agile h2 {
+    font-size: 40px;
+}
+
+#agile p {
+    font-size: 30px;
+}
+
+.footnote {
+    font-size: 22px;
+}
+
+#boards {
+    font-size: 55px;
+    text-align: right;
+}
+
+#boards h1 {
+    font-size: 75px;
+    text-align: right;
+    font-weight: blod;
+}
+
+#flow h2 {
+    font-size: 55px;
+    text-align: right;
+}
+
+#flow h1 {
+    font-size: 75px;
+    text-align: right;
+    font-weight: blod;
+}
+
+#kb h1 {
+    font-size: 75px;
+    text-align: right;
+    font-weight: blod;
+}
+
+#kb h2 {
+    font-size: 55px;
+    text-align: right;
+    font-weight: blod;
+}
+
+.normal-2 li {
+    font-size: 35px;
+    text-align: left;
+}
+
+.normal-2 h1 {
+    font-size: 75px;
+    text-align: left;
+    font-weight: blod;
+}
+
+.normal-2 h2 {
+    font-size: 45px;
+    text-align: left;
+    font-weight: blod;
+}
+
+.normal h1 {
+    font-size: 55px;
+    text-align: center;
+    font-weight: 3px;
+}
+
+.normal h2 {
+    font-size: 35px;
+    text-align: center;
+    font-weight: 3px;
+}
+
+.normal li {
+    font-size: 30px;
+    font-weight: 3px;
+}
+
+#another h1 {
+    font-size: 80px;
+    font-weight: 3px;
+}
 /*
     So you like the style of impress.js demo?
     Or maybe you are just curious how it was done?
@@ -30,7 +134,7 @@
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
+a, abbr, acronym, address, trello-intro, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
@@ -56,9 +160,6 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
     line-height: 1;
-}
-ol, ul {
-    list-style: none;
 }
 blockquote, q {
     quotes: none;
@@ -246,7 +347,7 @@ a:focus {
     scalable way of styling, but most of steps have quite a custom look
     and typography tricks here and there, so they had to be styled separately.
 
-    First is the title step with a big <h1> (no room for padding) and some
+    First is the title step with a trello-intro <h1> (no room for padding) and some
     3D positioning along Z axis.
 */
 
@@ -254,21 +355,8 @@ a:focus {
     padding: 0;
 }
 
-#title .try {
-    font-size: 64px;
-    position: absolute;
-    top: -0.5em;
-    left: 1.5em;
-
-    -webkit-transform: translateZ(20px);
-    -moz-transform:    translateZ(20px);
-    -ms-transform:     translateZ(20px);
-    -o-transform:      translateZ(20px);
-    transform:         translateZ(20px);
-}
-
 #title h1 {
-    font-size: 190px;
+    font-size: 140px;
 
     -webkit-transform: translateZ(50px);
     -moz-transform:    translateZ(50px);
@@ -277,32 +365,71 @@ a:focus {
     transform:         translateZ(50px);
 }
 
-#title .footnote {
-    font-size: 32px;
+#title .subtitle {
+    font-size: 74px;
+    position: absolute;
+    top: 2.3em;
+    left: 1.5em;
+
+    -webkit-transform: translateZ(20px);
+    -moz-transform:    translateZ(20px);
+    -ms-transform:     translateZ(20px);
+    -o-transform:      translateZ(20px);
+    transform:         translateZ(20px);
+}
+#title .author {
+    font-size: 36px;
 }
 
+#title .cc {
+    margin-left:170px;
+    font-size: 18px;
+}
+
+#intro-company .credo-logo {
+    transform: scale(0.5,0.5);
+}
+
+#intro-company p {
+    font-size: 35px;
+    text-align: center;
+}
+
+#intro-company h1 {
+    font-size: 45px;
+    text-align: center;
+    font-weight: 3px;
+}
 /*
     Second step is nothing special, just a text with a link, so it doesn't need
     any special styling.
 
-    Let's move to 'big thoughts' with centered text and custom font sizes.
+    Let's move to 'trello-intro thoughts' with centered text and custom font sizes.
 */
-#big {
+#trello-intro {
     width: 600px;
     text-align: center;
     font-size: 60px;
     line-height: 1;
 }
 
-#big b {
+#trello-intro b {
     display: block;
-    font-size: 250px;
-    line-height: 250px;
+    font-size: 120px;
+    line-height: 120px;
 }
 
-#big .thoughts {
-    font-size: 90px;
-    line-height: 150px;
+#trello-intro .trello-intro-basic {
+    margin-left:85px;
+    display: block;
+    text-align: ;
+}
+
+#trello-intro .trello-intro-intro {
+    margin-left:85px;
+    display: block;
+    text-align: left;
+    font-size: 80px;
 }
 
 /*
@@ -316,65 +443,37 @@ a:focus {
 /*
     This step has some animated text ...
 */
-#ing { width: 500px }
+#use { width: 500px }
 
 /*
     ... so we define display to `inline-block` to enable transforms and
     transition duration to 0.5s ...
 */
-#ing b {
+#use b {
+    font-size: 70px;
     display: inline-block;
     -webkit-transition: 0.5s;
     -moz-transition:    0.5s;
     -ms-transition:     0.5s;
     -o-transition:      0.5s;
     transition:         0.5s;
+    
 }
 
-/*
-    ... and we want 'positioning` word to move up a bit when the step gets
-    `present` class ...
-*/
-#ing.present .positioning {
-    -webkit-transform: translateY(-10px);
-    -moz-transform:    translateY(-10px);
-    -ms-transform:     translateY(-10px);
-    -o-transform:      translateY(-10px);
-    transform:         translateY(-10px);
-}
-
-/*
-    ... 'rotating' to rotate a quarter of a second later ...
-*/
-#ing.present .rotating {
-    -webkit-transform: rotate(-10deg);
-    -moz-transform:    rotate(-10deg);
-    -ms-transform:     rotate(-10deg);
-    -o-transform:      rotate(-10deg);
-    transform:         rotate(-10deg);
-
+#use.present .rotating {
+    -webkit-transform: rotate(-10deg) translateX(80px);
+    -moz-transform:    rotate(-10deg) translateX(80px);
+    -ms-transform:     rotate(-10deg) translateX(80px);
+    -o-transform:      rotate(-10deg) translateX(80px);
+    transform:         rotate(-10deg) translateX(80px);
+    
     -webkit-transition-delay: 0.25s;
     -moz-transition-delay:    0.25s;
     -ms-transition-delay:     0.25s;
     -o-transition-delay:      0.25s;
     transition-delay:         0.25s;
-}
-
-/*
-    ... and 'scaling' to scale down after another quarter of a second.
-*/
-#ing.present .scaling {
-    -webkit-transform: scale(0.7);
-    -moz-transform:    scale(0.7);
-    -ms-transform:     scale(0.7);
-    -o-transform:      scale(0.7);
-    transform:         scale(0.7);
-
-    -webkit-transition-delay: 0.5s;
-    -moz-transition-delay:    0.5s;
-    -ms-transition-delay:     0.5s;
-    -o-transition-delay:      0.5s;
-    transition-delay:         0.5s;
+    
+    
 }
 
 /*
@@ -421,7 +520,7 @@ a:focus {
     It is not needed by webkit browsers, but it is in Firefox. It's hard to say
     which behaviour is correct as 3D transforms spec is not very clear about it.
 */
-#its-in-3d p {
+#another p {
     -webkit-transform-style: preserve-3d;
     -moz-transform-style:    preserve-3d; /* Y U need this Firefox?! */
     -ms-transform-style:     preserve-3d;
@@ -435,14 +534,14 @@ a:focus {
 
     Quite a simple idea, but lot's of styles and prefixes.
 */
-#its-in-3d span,
-#its-in-3d b {
+#another span,
+#another b {
     display: inline-block;
-    -webkit-transform: translateZ(40px);
-    -moz-transform:    translateZ(40px);
-    -ms-transform:     translateZ(40px);
-    -o-transform:      translateZ(40px);
-     transform:        translateZ(40px);
+    -webkit-transform: translateZ(100px);
+    -moz-transform:    translateZ(100px);
+    -ms-transform:     translateZ(100px);
+    -o-transform:      translateZ(100px);
+     transform:        translateZ(100px);
 
     -webkit-transition: 0.5s;
     -moz-transition:    0.5s;
@@ -501,8 +600,8 @@ a:focus {
     transform:         translateZ(-10px);
 }
 
-#its-in-3d.present span,
-#its-in-3d.present b {
+#another.present span,
+#another.present b {
     -webkit-transform: translateZ(0px);
     -moz-transform:    translateZ(0px);
     -ms-transform:     translateZ(0px);

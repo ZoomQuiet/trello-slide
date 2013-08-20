@@ -71,208 +71,190 @@
     <title>impress.js | presentation tool based on the power of CSS3 transforms and transitions in modern browsers | by Bartek Szopka @bartaz</title>
     
     <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
-    <meta name="author" content="Bartek Szopka" />
+    <meta name="author" content="Xiongfei Guo" />
 
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
 
-    <!--
-        
-        Impress.js doesn't depend on any external stylesheet. Script adds all styles it needs for
-        presentation to work.
-        
-        This style below contains styles only for demo presentation. Browse it to see how impress.js
-        classes are used to style presentation steps, or how to apply fallback styles, but I don't want
-        you to use them directly in your presentation.
-        
-        Be creative, build your own. We don't really want all impress.js presentations to look the same,
-        do we?
-        
-        When creating your own presentation get rid of this file. Start from scratch, it's fun!
-        
-    -->
     <link href="css/impress-demo.css" rel="stylesheet" />
     
     <link rel="shortcut icon" href="favicon.png" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 </head>
 
-<!--
-    
-    Body element is used by impress.js to set some useful class names, that will allow you to detect
-    the support and state of the presentation in CSS or other scripts.
-    
-    First very useful class name is `impress-not-supported`. This class means, that browser doesn't
-    support features required by impress.js, so you should apply some fallback styles in your CSS.
-    It's not necessary to add it manually on this element. If the script detects that browser is not
-    good enough it will add this class, but keeping it in HTML means that users without JavaScript
-    will also get fallback styles.
-    
-    When impress.js script detects that browser supports all required features, this class name will
-    be removed.
-    
-    The class name on body element also depends on currently active presentation step. More details about
-    it can be found later, when `hint` element is being described.
-    
--->
 <body class="impress-not-supported">
 
-<!--
-    For example this fallback message is only visible when there is `impress-not-supported` class on body.
--->
 <div class="fallback-message">
     <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
     <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
 </div>
 
-<!--
-    
-    Now that's the core element used by impress.js.
-    
-    That's the wrapper for your presentation steps. In this element all the impress.js magic happens.
-    It doesn't have to be a `<div>`. Only `id` is important here as that's how the script find it.
-    
-    You probably won't need it now, but there are some configuration options that can be set on this element.
-    
-    To change the duration of the transition between slides use `data-transition-duration="2000"` giving it
-    a number of ms. It defaults to 1000 (1s).
-    
-    You can also control the perspective with `data-perspective="500"` giving it a number of pixels.
-    It defaults to 1000. You can set it to 0 if you don't want any 3D effects.
-    If you are willing to change this value make sure you understand how CSS perspective works:
-    https://developer.mozilla.org/en/CSS/perspective
-    
-    But as I said, you won't need it for now, so don't worry - there are some simple but interesing things
-    right around the corner of this tag ;)
-    
--->
 <div id="impress">
 
-    <!--
-        
-        Here is where interesting thing start to happen.
-        
-        Each step of the presentation should be an element inside the `#impress` with a class name
-        of `step`. These step elements are positioned, rotated and scaled by impress.js, and
-        the 'camera' shows them on each step of the presentation.
-        
-        Positioning information is passed through data attributes.
-        
-        In the example below we only specify x and y position of the step element with `data-x="-1000"`
-        and `data-y="-1500` attributes. This means that **the center** of the element (yes, the center)
-        will be positioned in point x = -1000px and y = -1500px of the presentation 'canvas'.
-        
-        It will not be rotated or scaled.
-        
-    -->
-    <div id="bored" class="step slide" data-x="-1000" data-y="-1500">
-        <q>Aren't you just <b>bored</b> with all those slides-based presentations?</q>
-    </div>
-
-    <!--
-        
-        The `id` attribute of the step element is used to identify it in the URL, but it's optional.
-        If it is not defined, it will get a default value of `step-N` where N is a number of slide.
-        
-        So in the example below it'll be `step-2`.
-        
-        The hash part of the url when this step is active will be `#/step-2`.
-        
-        You can also use `#step-2` in a link, to point directly to this particular step.
-        
-        Please note, that while `#/step-2` (with slash) would also work in a link it's not recommended.
-        Using classic `id`-based links like `#step-2` makes these links usable also in fallback mode.
-        
-    -->
-    <div class="step slide" data-x="0" data-y="-1500">
-        <q>Don't you think that presentations given <strong>in modern browsers</strong> shouldn't <strong>copy the limits</strong> of 'classic' slide decks?</q>
-    </div>
-
-    <div class="step slide" data-x="1000" data-y="-1500">
-        <q>Would you like to <strong>impress your audience</strong> with <strong>stunning visualization</strong> of your talk?</q>
-    </div>
-
-    <!--
-        
-        This is an example of step element being scaled.
-        
-        Again, we use a `data-` attribute, this time it's `data-scale="4"`, so it means that this
-        element will be 4 times larger than the others.
-        From presentation and transitions point of view it means, that it will have to be scaled
-        down (4 times) to make it back to it's correct size.
-        
-    -->
     <div id="title" class="step" data-x="0" data-y="0" data-scale="4">
-        <span class="try">then you should try</span>
-        <h1>impress.js<sup>*</sup></h1>
-        <span class="footnote"><sup>*</sup> no rhyme intended</span>
+        <h1><strong>Trello</strong></h1>
+        <span class="subtitle">小团队项目管理的利器</span><br />
+        <span class="author">郭雄飞 景略半导体</span><br />
+        <span class="cc">本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/cn/">知识共享署名-相同方式共享 3.0 中国大陆许可协议</a>进行许可。<a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/cn/"><img alt="知识共享许可协议" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/cn/88x31.png" /></a></span>
     </div>
 
-    <!--
-        
-        This element introduces rotation.
-        
-        Notation shouldn't be a surprise. We use `data-rotate="90"` attribute, meaning that this
-        element should be rotated by 90 degrees clockwise.
-        
-    -->
-    <div id="its" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="5">
-        <p>It's a <strong>presentation tool</strong> <br/>
-        inspired by the idea behind <a href="http://prezi.com">prezi.com</a> <br/>
-        and based on the <strong>power of CSS3 transforms and transitions</strong> in modern browsers.</p>
+    <div id="intro-company" class="step" data-x="-1700" data-y="-1300" data-rotate="-90" data-scale="1">
+        <div class='credo-logo'><img alt="Credo Semi" style="border-width:0" src="img/credo.png" /></div>
+        <h1>景略半导体</h1>
+        <p>10G/28G/50G SerDes</p>
+        <p>超高速ADC</p>
+        <p>EOC</p>
+    </div>
+    <div id="intro-team" class="step normal" data-x="-700" data-y="-1300" data-rotate="-90" data-scale="1">
+        <h1>团队目前的状态</h1>
+        <li>4+2 仍在初期阶段</li>
+        <li>开发速度基本恒定</li>
+        <li>正努力将大部分代码的测试自动化，实现持续集成，实现进度评估自动化和可视化</li>
+        <li>开发人员有~40%的时间花在技术支持上</li>
+        <li>1核心项目+3到5个中型项目+N个小项目，未来一些项目会开源</li>
     </div>
 
-    <div id="big" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="6">
-        <p>visualize your <b>big</b> <span class="thoughts">thoughts</span></p>
+    <div id="intro-myself" class="step normal" data-x="300" data-y="-1300" data-rotate="-90" data-scale="1">
+        <h1>自我介绍</h1>
+        <li></li>
     </div>
 
-    <!--
-        
-        And now it gets really exciting! We move into third dimension!
-        
-        Along with `data-x` and `data-y`, you can define the position on third (Z) axis, with
-        `data-z`. In the example below we use `data-z="-3000"` meaning that element should be
-        positioned far away from us (by 3000px).
-        
-    -->
-    <div id="tiny" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1">
-        <p>and <b>tiny</b> ideas</p>
+    <div id="agenda" class="step normal" data-x="1300" data-y="-1300" data-rotate="-90" data-scale="1">
+        <h1>演讲内容概述</h1>
+        <li>Trello功能简介</li>
+        <li>我们怎么用Trello</li>
+        <li>Trello其他工具的配合</li>
+        <li>团队的发展过程和故事</li>
+        <li>~提问环节~</li>
+        <li>关于敏捷过程和小团队的一些看法</li>
+        <li>其他经验分享</li>
     </div>
 
-    <!--
-        
-        This step here doesn't introduce anything new when it comes to data attributes, but you
-        should notice in the demo that some words of this text are being animated.
-        It's a very basic CSS transition that is applied to the elements when this step element is
-        reached.
-        
-        At the very beginning of the presentation all step elements are given the class of `future`.
-        It means that they haven't been visited yet.
-        
-        When the presentation moves to given step `future` is changed to `present` class name.
-        That's how animation on this step works - text moves when the step has `present` class.
-        
-        Finally when the step is left the `present` class is removed from the element and `past`
-        class is added.
-        
-        So basically every step element has one of three classes: `future`, `present` and `past`.
-        Only one current step has the `present` class.
-        
-    -->
-    <div id="ing" class="step" data-x="3500" data-y="-850" data-rotate="270" data-scale="6">
-        <p>by <b class="positioning">positioning</b>, <b class="rotating">rotating</b> and <b class="scaling">scaling</b> them on an infinite canvas</p>
+    <div id="first-of-all" class="step normal" data-x="850" data-y="3000" data-rotate="90" data-scale="6">
+        <h1>工具和人的关系</h1>
+        <h2>工具是服务于人的</h2>
+        <h2>再好的工具也不能解决所有问题</h2>
+        <h2>适合自己的才是最好的</h2>
+    </div>
+    
+    <div id="trello-intro" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="6">
+        <p><span class="trello-intro-intro">介绍</span>
+        <b>Trello</b>
+        <span class="trello-intro-basic">基本功能</span>
+        </p>
     </div>
 
-    <div id="imagination" class="step" data-x="6700" data-y="-300" data-scale="6">
-        <p>the only <b>limit</b> is your <b class="imagination">imagination</b></p>
+
+    <div id="use" class="step" data-x="3500" data-y="-850" data-rotate="270" data-scale="6">
+        <p>我们怎么用<br /><b class="rotating">Trello</b><p>
+    </div>
+    
+    <div id="boards" class="step" data-x="5000" data-y="-2000" data-rotate="180" data-scale="2">
+        <h1>分板</h1>
+        <li>需求分析</li>
+        <li>开发</li>
+        <li>技术支持</li>
+        <li>知识库</li>
+    </div>
+    <div id="daliy" class="step normal-2" data-x="2500" data-y="-2000" data-rotate="180" data-scale="2">
+        <h1>每日<span class="footnote">所有成员到齐后<span></h1>
+        <li>FAE+SI+Dev <b>站会</b><span class="footnote">10分钟<span></li>
+        <li>Dev <b>站会</b><span class="footnote">10分钟<span></li>
+        <li>不定期和异地同事开会<span class="footnote">(Skype)</span></li>
+        <li>下班前确保当日所有的工作在都在卡上有所体现</li>
+    </div>
+    
+    <div id="weekly" class="step normal-2" data-x="2500" data-y="-3500" data-rotate="180" data-scale="2">
+        <h1>每周</h1>
+        <h2>公司跨部门会议</h2>
+        <li>报告上周工作</li>
+        <li>讨论遇到的问题</li>
+        <li>收集需求</li>
+        <h2>会后</h2>
+        <li>任务优先级排序</li>
+        <li>讨论本周要做的</li>
+    </div>
+    <div id="flow" class="step normal-2" data-x="5000" data-y="-3500" data-rotate="180" data-scale="2">
+        <h1>不定期</h1>
+        <h2>改进流程</h2>
+        <h2>±约束</h2>
+        <h2><b>大胆</b>尝试新事物</h2>
+    </div>
+    
+    <div id="kb" class="step normal-2" data-x="5000" data-y="-5000" data-rotate="180" data-scale="2">
+        <h1>知识库</h1>
+        <h2>Knowledge Base</h2>
+    </div>
+    
+    <div id="use-trello" class="step normal-2" data-x="2500" data-y="-5000" data-rotate="180" data-scale="2">
+        <h1>使用Trello之前 - Trac</h1>
+    </div>
+    
+    <div id="use-blank" class="step" data-x="3500" data-y="-850" data-rotate="270" data-scale="6">
     </div>
 
-    <div id="source" class="step" data-x="6300" data-y="2000" data-rotate="20" data-scale="4">
-        <p>want to know more?</p>
-        <q><a href="http://github.com/bartaz/impress.js">use the source</a>, Luke!</q>
+    <div id="tiny" class="step" data-x="3500" data-y="-700" data-rotate="360" data-scale="0.3">
+        <p>any <b>questions?</b></p>
     </div>
 
+    <div id="another" class="step" data-x="8000" data-y="-300" data-scale="6" data-z="-100" data-rotate-x="-60" data-rotate-y="30" >
+        <h1>换个<b>角度</b></h1>
+    </div>
+    
+    <div id="agile" class="step" data-x="14000" data-y="-300" data-scale="6" data-z="-100" data-rotate-x="-60" data-rotate-y="30" >
+        <h1>敏捷软件宣言</h1>
+        <hr />
+        <h2><b>个体和互动</b> 高于 流程和工具</h2>
+        <h2><b>工作的软件</b> 高于 详尽的文档</h2>
+        <h2><b>客户合作</b> 高于  合同谈判</h2>
+        <h2><b>响应变化</b> 高于  遵循计划</h2>
+        <hr />
+        <p>尽管右项有其价值，我们更重视左项的价值。</p>
+    </div>
+
+    <div id="import-agile" class="step" data-x="23000" data-y="-300" data-scale="6" data-z="-100" data-rotate-x="-60" data-rotate-y="30" >
+        <h1>导入敏捷</h1>
+        <li>需要有一个<b>推动者</b>和<b>布道者</b></li>
+        <li>你的团队和其他部门的接口是什么？消费什么？产出什么？</li>
+    </div>
+    
+    <div id="import-proc" class="step" data-x="30000" data-y="10000" data-scale="6" data-z="-100" data-rotate-x="-60" data-rotate-y="30" >
+        <h1>敏捷过程(Scrum/Kanban/XP)</h1>
+        <li>唯一不变的只有变化本身</li>
+        <li>放权 自管理</li>
+    </div>
+    
+    <div id="best-of-trello" class="step" data-x="30000" data-y="-300" data-scale="6" data-z="-100" data-rotate-x="-60" data-rotate-y="30" >
+        <h1><b>Trello</b>最大的优点 - <b>简单</b></h1>
+        <li>学习成本接近0 - 导入敏捷和培训的代价就小</li>
+        <li>不带来额外的负担 - 花更多的时间在更有意义的事情上</li>
+        <li>只提供最基本的东西 - 所以改进流程时的代价就很小</li>
+        <hr />
+        <p><sup>*</sup>而且还<b>免费</b></p>
+    </div>
+    
+    <div id="elec-kanban" class="step normal-2" data-x="35000" data-y="6000" data-scale="6" data-z="-100" data-rotate-x="-60" data-rotate-y="30" >
+        <h2>电子看板相比物理看板</h2>
+        <li>支持远程协作</li>
+        <li>可搜索可备份</li>
+        <li>可以使用API来实现自定义功能</li>
+    </div>
+    
+    <div id="trello-others" class="step normal-2" data-x="43000" data-y="7000" data-scale="6" data-z="-100" data-rotate-x="-60" data-rotate-y="30" >
+        <h2>关于Trello...还有</h2>
+        <li>实时Web应用</li>
+        <li>支持大部分移动平台</li>
+        <li>Markdown!让你更专注于内容。还在用MS Word?</li>
+        <li>做为一个产品给予我们的启示</li>
+    </div>
+    
+    <div id="trello-bad" class="step normal-2" data-x="48000" data-y="12000" data-scale="6" data-z="-100" data-rotate-x="-60" data-rotate-y="30" >
+        <h2>Trello的缺点</h2>
+        <li>简单的另一面</li>
+        <li>历史记录回溯</li>
+        <li>量化统计怎么做?</li>
+    </div>
+    
     <div id="one-more-thing" class="step" data-x="6000" data-y="4000" data-scale="2">
-        <p>one more thing...</p>
+        <p>片尾公益广告:</p>
     </div>
 
     <!--
@@ -288,8 +270,7 @@
         
     -->
     <div id="its-in-3d" class="step" data-x="6200" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
-        <p><span class="have">have</span> <span class="you">you</span> <span class="noticed">noticed</span> <span class="its">it's</span> <span class="in">in</span> <b>3D<sup>*</sup></b>?</p>
-        <span class="footnote">* beat that, prezi ;)</span>
+        <p>《<span class="have">无</span> <span class="you">所</span> <span class="noticed">不</span> <span class="its">能</span> <span class="in">的</span> <b>开源<sup></sup></b>》</p>
     </div>
 
     <!--
@@ -307,7 +288,7 @@
         CSS transfrom docs: https://developer.mozilla.org/en/CSS/transform
         
     -->
-    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="12">
     </div>
 
 </div>
@@ -390,49 +371,3 @@ if ("ontouchstart" in document.documentElement) {
 
 </body>
 </html>
-
-<!--
-    
-    Now you know more or less everything you need to build your first impress.js presentation, but before
-    you start...
-    
-    Oh, you've already cloned the code from GitHub?
-    
-    You have it open in text editor?
-    
-    Stop right there!
-    
-    That's not how you create awesome presentations. This is only a code. Implementation of the idea that
-    first needs to grow in your mind.
-    
-    So if you want to build great presentation take a pencil and piece of paper. And turn off the computer.
-    
-    Sketch, draw and write. Brainstorm your ideas on a paper. Try to build a mind-map of what you'd like
-    to present. It will get you closer and closer to the layout you'll build later with impress.js.
-    
-    Get back to the code only when you have your presentation ready on a paper. It doesn't make sense to do
-    it earlier, because you'll only waste your time fighting with positioning of useless points.
-    
-    If you think I'm crazy, please put your hands on a book called "Presentation Zen". It's all about 
-    creating awesome and engaging presentations.
-    
-    Think about it. 'Cause impress.js may not help you, if you have nothing interesting to say.
-    
--->
-
-<!--
-    
-    Are you still reading this?
-    
-    For real?
-    
-    I'm impressed! Feel free to let me know that you got that far (I'm @bartaz on Twitter), 'cause I'd like
-    to congratulate you personally :)
-    
-    But you don't have to do it now. Take my advice and take some time off. Make yourself a cup of coffee, tea,
-    or anything you like to drink. And raise a glass for me ;)
-    
-    Cheers!
-    
--->
-
