@@ -1,3 +1,33 @@
+#trello-bad p{
+    font-size: 30px;
+}
+
+#import-proc p{
+    font-size: 30px;
+}
+
+#import-proc div {
+    font-size: 40px;
+}
+
+.normal-3 li {
+    font-size: 46px;
+    text-align: left;
+}
+
+.normal-3 h1 {
+    font-size: 75px;
+    text-align: left;
+    font-weight: blod;
+}
+
+.normal-3 h2 {
+    font-size: 45px;
+    text-align: left;
+    font-weight: blod;
+}
+
+
 #best-of-trello h1 {
     font-size: 52px;
 }
@@ -100,7 +130,6 @@
 
 #another h1 {
     font-size: 80px;
-    font-weight: 3px;
 }
 /*
     So you like the style of impress.js demo?
@@ -386,6 +415,11 @@ a:focus {
     font-size: 18px;
 }
 
+#title .weibo {
+    font-size: 16px;
+    line-height: 0px;
+}
+
 #intro-company .credo-logo {
     transform: scale(0.5,0.5);
 }
@@ -396,9 +430,8 @@ a:focus {
 }
 
 #intro-company h1 {
-    font-size: 45px;
+    font-size: 55px;
     text-align: center;
-    font-weight: 3px;
 }
 /*
     Second step is nothing special, just a text with a link, so it doesn't need
@@ -416,7 +449,7 @@ a:focus {
 #trello-intro b {
     display: block;
     font-size: 120px;
-    line-height: 120px;
+w
 }
 
 #trello-intro .trello-intro-basic {
@@ -520,7 +553,8 @@ a:focus {
     It is not needed by webkit browsers, but it is in Firefox. It's hard to say
     which behaviour is correct as 3D transforms spec is not very clear about it.
 */
-#another p {
+#its-in-3d p {
+    font-size: 70px;
     -webkit-transform-style: preserve-3d;
     -moz-transform-style:    preserve-3d; /* Y U need this Firefox?! */
     -ms-transform-style:     preserve-3d;
@@ -534,8 +568,8 @@ a:focus {
 
     Quite a simple idea, but lot's of styles and prefixes.
 */
-#another span,
-#another b {
+#its-in-3d span,
+#its-in-3d b {
     display: inline-block;
     -webkit-transform: translateZ(100px);
     -moz-transform:    translateZ(100px);
@@ -600,8 +634,8 @@ a:focus {
     transform:         translateZ(-10px);
 }
 
-#another.present span,
-#another.present b {
+#its-in-3d.present span,
+#its-in-3d.present b {
     -webkit-transform: translateZ(0px);
     -moz-transform:    translateZ(0px);
     -ms-transform:     translateZ(0px);
@@ -800,3 +834,7 @@ a:focus {
     Thanks for reading. I hope you enjoyed it at least as much as I enjoyed writing it
     for you.
 */
+
+#one-more-thing {
+    font-size: 60px;
+}
